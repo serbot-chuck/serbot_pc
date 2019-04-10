@@ -1,0 +1,11 @@
+<launch>
+  <arg name="multi_robot_name" default=""/>
+  <arg name="set_lidar_frame_id" default="base_scan"/>
+
+  
+  <include file="$(find serbot_bringup)/launch/rplidar.launch">
+    <arg name="set_frame_id" value="$(arg set_lidar_frame_id)"/>
+  </include>
+
+  <node pkg="serbot_bringup" type="serbot_diagnostics" name="serbot_diagnostics" output="screen"/>
+</launch>

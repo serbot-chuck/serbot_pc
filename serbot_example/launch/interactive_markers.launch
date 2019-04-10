@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="serbot_example" type="serbot_marker_server" name="serbot_marker_server">
+    <remap from="interactive_marker_velocity_smoother/raw_cmd_vel" to="cmd_vel"/>
+  </node>
+</launch>

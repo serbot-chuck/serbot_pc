@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>serbot_slam</name>
+  <version>1.2.0</version>
+  <description>
+    The serbot_slam package provides roslaunch scripts for starting the SLAM
+  </description>
+  <maintainer email="soohyun0907@naver.com">SooHyun</maintainer>
+  <license>Apache 2.0</license>
+  <url type="website">http://wiki.ros.org/turtlebot3_slam</url>
+  <url type="emanual">http://turtlebot3.robotis.com</url>
+  <url type="repository">https://github.com/ROBOTIS-GIT/turtlebot3</url>
+  <url type="bugtracker">https://github.com/ROBOTIS-GIT/turtlebot3/issues</url>
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roscpp</depend>
+  <depend>sensor_msgs</depend>
+  <exec_depend>serbot_bringup</exec_depend>
+  <!--  <exec_depend>slam_gmapping</exec_depend>
+  <exec_depend>cartographer</exec_depend>
+  <exec_depend>cartographer_ros</exec_depend>
+  <exec_depend>cartographer_ros_msgs</exec_depend>
+  <exec_depend>cartographer_rviz</exec_depend>
+  <exec_depend>hector_mapping</exec_depend>
+  <exec_depend>slam_karto</exec_depend>
+  <exec_depend>frontier_exploration</exec_depend>
+  <exec_depend>navigation_stage</exec_depend> -->
+</package>

@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="serbot_example" type="serbot_cliff" name="serbot_cliff" output="screen">
+  </node>
+</launch>

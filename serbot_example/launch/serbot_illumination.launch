@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="serbot_example" type="serbot_illumination" name="serbot_illumination" output="screen">
+  </node>
+</launch>

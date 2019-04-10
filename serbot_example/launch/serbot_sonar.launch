@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="serbot_example" type="serbot_sonar" name="serbot_sonar" output="screen">
+  </node>
+</launch>

@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="serbot_example" type="serbot_pointop_key" name="serbot_pointop_keyboard"  output="screen">
+  </node>
+</launch>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>serbot</name>
+  <version>1.2.0</version>
+  <description>
+    ROS packages for the Serbot
+  </description>
+  <maintainer email="soohyun0907@naver.com">SooHyun</maintainer>
+  <license>Apache 2.0</license>
+  <license>BSD</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>serbot_bringup</exec_depend>
+  <exec_depend>serbot_example</exec_depend>
+  <exec_depend>serbot_navigation</exec_depend>
+  <exec_depend>serbot_slam</exec_depend>
+  <export><metapackage/></export>
+</package>

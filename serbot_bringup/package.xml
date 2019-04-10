@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>serbot_bringup</name>
+  <version>1.2.0</version>
+  <description>
+    roslaunch scripts for starting the Serbot1
+  </description>
+  <maintainer email="soohyun0907@naver.com">SooHyun</maintainer>
+  <license>Apache 2.0</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roscpp</depend>
+  <depend>std_msgs</depend>
+  <depend>diagnostic_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>serbot_msgs</depend>
+
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>rplidar_ros</exec_depend>
+  <!-- <exec_depend>realsense_camera</exec_depend> for TurtleBot3 Waffle using Intel RealSense Camera -->
+  <!-- <exec_depend>raspicam_node</exec_depend> for TurtleBot3 Waffle Pi using Raspberry Pi Camera -->
+</package>
