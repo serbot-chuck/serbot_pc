@@ -13,6 +13,8 @@
   <include file="$(find serbot_slam)/launch/serbot_$(arg slam_methods).launch">
     <arg name="configuration_basename" value="$(arg configuration_basename)"/>
   </include>
+  <include file="$(find serbot_slam)/launch/serbot_tf.launch">
+  </include>
 
   <!-- rviz -->
   <group if="$(arg open_rviz)"> 
