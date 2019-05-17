@@ -8,4 +8,5 @@
   </include>
 
   <node pkg="serbot_bringup" type="serbot_diagnostics" name="serbot_diagnostics" output="screen"/>
+
 </launch>
