@@ -7,12 +7,12 @@
   <include file="$(find serbot_bringup)/launch/serbot_remote.launch">
   </include>
 
-  <include file="$(find serbot_slam)/launch/serbot_p.launch">
+  <include file="$(find serbot_slam)/launch/serbot_hector.launch">
   </include>
 
   <!-- rviz -->
   <group if="$(arg open_rviz)"> 
     <node pkg="rviz" type="rviz" name="rviz" required="true"
-          args="-d $(find serbot_slam)/rviz/serbot_gmapping.rviz"/>
+          args="-d $(find serbot_slam)/rviz/serbot_hector.rviz"/>
   </group>
 </launch>

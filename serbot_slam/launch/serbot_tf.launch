@@ -14,8 +14,8 @@
 	      args="0 0 0 0 0 0 base_footprint base_link 100"/>
 
 	<!-- base_link to base_laser -->  	
-	<node pkg="tf" type="static_transform_publisher" name="base_link_to_laser_link" 
-	      args="0 0 0 0 0 0 0 base_link laser 100" />
-
-        
+	<!--<node pkg="tf" type="static_transform_publisher" name="base_link_to_laser_link" 
+	      args="0 0 0 0 0 0 0 base_link laser 100" />-->
+        <node pkg="tf" type="static_transform_publisher" name="base_to_laser_broadcaster" args="0 0 0 0 0 0 base_link laser 100"/>
+        <node pkg="tf" type="static_transform_publisher" name="laser_to_map_broadcaster" args="0 0 0 0 0 0 laser map 100"/>
 </launch>

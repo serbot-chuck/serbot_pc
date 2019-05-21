@@ -1,6 +1,5 @@
 <launch>
   <!-- Arguments -->
-  <arg name="configuration_basename" default="serbot_lds_2d.lua"/>
   <!--<arg name="odom_frame" default="odom"/>-->
   <arg name="odom_frame" default="base_footprint"/>
   <arg name="base_frame" default="base_footprint"/>

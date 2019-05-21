@@ -21,6 +21,10 @@
   </include>
 
   <node pkg="gmapping" type="slam_gmapping" name="serbot_slam_gmapping" output="screen"/>
+  <!--<node pkg="tf" type="static_transform_publisher" name="base_footprint_to_map"
+	      args="0 0 0 0 0 0 base_footprint map 100"/>-->
+  <!--<include file="$(find serbot_slam)/launch/serbot_tf.launch"/>-->
+  <!--<node pkg="tf" type="static_transform_publisher" name="laser_to_map_broadcaster" args="0 0 0 0 0 0 laser map 100"/>-->
 
   <!--<include file="$(find serbot_slam)/launch/serbot_gmapping.launch"/>-->
   <!--<node pkg="gmapping" type="slam_gmapping" name="serbot_slam_gmapping" output="screen"/>-->

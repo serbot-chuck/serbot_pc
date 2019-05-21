@@ -1,0 +1,20 @@
+<launch>
+
+  <arg name="map_file" default="$(find serbot_bringup)/maps/map.yaml" />
+
+  <include file="$(find serbot_bringup)/launch/move_base.launch"/>
+
+  <!-- Tf -->
+  <include file="$(find serbot_bringup)/launch/serbot_tf.launch" />
+
+  <!-- Amcl -->
+  <include file="$(find serbot_bringup)/launch/localization.launch" />
+
+  <!-- Odometry from lidar data-->
+  <include file="$(find serbot_bringup)/launch/odom_laser.launch" />
+
+  <!-- Map server-->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+</launch>
+
