@@ -5,9 +5,10 @@
   <arg name="open_rviz" default="true"/>
   <arg name="move_forward_only" default="false"/>
 
+  <include file="$(find serbot_bringup)/launch/serbot_tf.launch"/>
+
   <!-- serbot -->
-  <include file="$(find serbot_bringup)/launch/serbot_remote.launch">
-  </include>
+  <include file="$(find serbot_bringup)/launch/serbot_remote.launch"/>
 
   <!-- Map server -->
   <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
