@@ -2,7 +2,6 @@
   <!-- Arguments -->
   <!--<arg name="configuration_basename" default="serbot_lds_2d.lua"/>-->
   <!--<arg name="odom_frame" default="odom"/>-->
-  <arg name="set_lidar_frame_id" default="base_scan"
   <arg name="odom_frame" default="base_footprint"/>
   <arg name="base_frame" default="base_footprint"/>
   <arg name="scan_subscriber_queue_size" default="5"/>

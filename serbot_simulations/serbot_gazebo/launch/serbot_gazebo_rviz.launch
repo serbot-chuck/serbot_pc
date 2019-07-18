@@ -1,9 +1,0 @@
-<launch>
-
-  <include file="$(find serbot_bringup)/launch/serbot_remote.launch">
-  </include>
-
-  <!--<node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot3_gazebo)/rviz/turtlebot3_gazebo_model.rviz"/>-->
-
-  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find serbot_slam)/rviz/serbot_hector.rviz"/>
-</launch>

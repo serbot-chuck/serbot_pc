@@ -3,7 +3,7 @@
   <name>serbot_teleop</name>
   <version>1.2.0</version>
   <description>
-    Provides teleoperation using keyboard for TurtleBot3.
+    Provides teleoperation using keyboard for Serbot.
   </description>
   <license>BSD</license>
   <author>Melonee Wise</author>

@@ -1,0 +1,23 @@
+<launch>
+  <!-- Arguments -->
+  <!--<arg name="configuration_basename" default="turtlebot3_lds_2d.lua"/>-->
+  <arg name="open_rviz" default="true"/>
+  <!--<arg name="set_lidar_frame_id" default="base_scan"/>
+
+  <include file="$(find serbot_bringup)/launch/rplidar.launch">
+    <arg name="set_frame_id" value="$(arg set_lidar_frame_id)"/>
+  </include>-->
+
+  <include file="$(find serbot_bringup)/launch/serbot_remote.launch">
+  </include>
+
+  <include file="$(find serbot_slam)/launch/serbot_gmapping_original.launch">
+    <!--<arg name="configuration_basename" value="$(arg configuration_basename)"/>-->
+  </include>
+
+  <!-- rviz -->
+  <group if="$(arg open_rviz)"> 
+    <node pkg="rviz" type="rviz" name="rviz" required="true"
+          args="-d $(find serbot_slam)/rviz/serbot_gmapping.rviz"/>
+  </group>
+</launch>

@@ -10,7 +10,7 @@
   <license>BSD</license>
   <buildtool_depend>catkin</buildtool_depend>
   <exec_depend>serbot_bringup</exec_depend>
-  <exec_depend>serbot_example</exec_depend>
+  <!--<exec_depend>serbot_example</exec_depend>-->
   <exec_depend>serbot_navigation</exec_depend>
   <exec_depend>serbot_slam</exec_depend>
   <export><metapackage/></export>

@@ -5,6 +5,8 @@
   <!--<include file="$(find serbot_bringup)/launch/includes/description.launch.xml"/>-->
 
   <include file="$(find serbot_bringup)/launch/serbot_move_base.launch"/>
+  
+  <include file="$(find serbot_bringup)/launch/test_lidar.launch"/>
 
   <!-- Tf -->
   <include file="$(find serbot_bringup)/launch/serbot_tf.launch" />
