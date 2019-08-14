@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="serbot_opencv" type="serbot_fullbody_detect.py" name="serbot_fullbody_detect"  output="screen">
+  </node>
+  <node name="rviz" pkg="rviz" type="rviz" />
+</launch>
