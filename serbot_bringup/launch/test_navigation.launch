@@ -1,6 +1,6 @@
 <launch>
 
-  <include file="$(find serbot_bringup)/launch/test_bringup.launch" />
+  <include file="$(find serbot_bringup)/launch/serbot_bringup.launch" />
   <include file="$(find serbot_opencv)/launch/people_detect.launch" />
 
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find serbot_bringup)/rviz/serbot_navigation.rviz"/>

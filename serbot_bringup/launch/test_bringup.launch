@@ -2,8 +2,6 @@
 
   <arg name="map_file" default="$(find serbot_bringup)/maps/map.yaml" />
 
-  <!--<include file="$(find serbot_bringup)/launch/includes/description.launch.xml"/>-->
-
   <include file="$(find serbot_bringup)/launch/serbot_move_base.launch"/>
   
   <include file="$(find serbot_bringup)/launch/test_lidar.launch"/>
@@ -12,7 +10,6 @@
   <include file="$(find serbot_bringup)/launch/serbot_tf.launch" />
 
   <!-- Amcl -->
-  <!--<include file="$(find serbot_bringup)/launch/localization.launch" />-->
   <include file="$(find serbot_bringup)/launch/amcl.launch" />
 
   <!-- Odometry from lidar data-->

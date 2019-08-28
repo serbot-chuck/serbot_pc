@@ -38,7 +38,7 @@ DWAPlannerROS:
 
 # eunyeong
   xy_goal_tolerance: 0.15
-  yaw_goal_tolerance: 0.8
+  yaw_goal_tolerance: 0.2
 #################################
 
   latch_xy_goal_tolerance: false

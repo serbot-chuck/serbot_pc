@@ -1,13 +1,13 @@
-max_obstacle_height: 0.4 # assume something like an arm is mounted on top of the robot
-min_obstacle_height: 0.0 # assume something like an arm is mounted on top of the robot
+obstacle_range: 3.0
+raytrace_range: 3.5
 
-# Obstacle Cost Shaping (http://wiki.ros.org/costmap_2d/hydro/inflation)
-robot_radius: 0.3  # distance a circular robot should be clear of the obstacle (kobuki: 0.18)
-# footprint: [[x0, y0], [x1, y1], ... [xn, yn]]  # if the robot is not circular
-#footprint: [[-0.7, -0.4], [-0.7, 0.4], [0.7, 0.4], [0.8, 0.0], [0.7, -0.4]]
 footprint: [[-0.2, -0.1], [-0.2, 0.1], [0.2, 0.1], [0.23, 0.0], [0.2, -0.1]]
+robot_radius: 0.4
 
-map_type: voxel
+inflation_radius: 0.2
+cost_scaling_factor: 3.0
+
+map_type: costmap
 
 obstacle_layer:
   enabled:              true
@@ -23,7 +23,7 @@ obstacle_layer:
   z_resolution: 0.2
   z_voxels: 2
   publish_voxel_map: false
-  observation_sources:  scan
+  observation_sources: scan
   scan:
     data_type: LaserScan
     topic: scan
@@ -39,7 +39,7 @@ obstacle_layer:
 inflation_layer:
   enabled:              true
   cost_scaling_factor:  3.0  # exponential rate at which the obstacle cost drops off (default: 10)
-  inflation_radius:     0.2  # max. distance from an obstacle at which costs are incurred for planning paths.
+  inflation_radius:     0.3  # max. distance from an obstacle at which costs are incurred for planning paths.
 
 static_layer:
   enabled:              true
