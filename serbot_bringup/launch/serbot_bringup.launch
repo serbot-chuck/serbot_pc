@@ -1,22 +1,32 @@
 <launch>
+  <arg name="map_file" default="$(find serbot_bringup)/maps/map.yaml" />
+
+  <!-- Map server-->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" >
+      <param name="frame_id" value="map" />
+  </node>
 
   <include file="$(find serbot_bringup)/launch/serbot_move_base.launch"/>
 
   <!-- Tf -->
   <include file="$(find serbot_bringup)/launch/serbot_tf.launch" />
+  <!--<node pkg="serbot_setup_tf" type="tf_broadcaster" name="tf_broadcaster" />-->
 
   <!-- Amcl -->
-  <include file="$(find serbot_bringup)/launch/amcl.launch" />
+  <node pkg="amcl" type="amcl" name="amcl" >
+      <param name="global_frame_id"           value="map"/>
+      <param name="odom_frame_id"             value="odom"/>
+      <param name="base_frame_id"             value="base_footprint"/>
+      <param name="use_map_topic" value="true"/>
+      <!--<param name="first_map_only" value="true"/>-->
+      <param name="tf_broadcast" value="true"/>
+      <param name="transform_tolerance"       value="0.1"/>
+      <param name="gui_publish_rate"          value="50.0"/>
+  </node>
+  <!--<include file="$(find serbot_bringup)/launch/amcl.launch" />-->
 
   <!-- Odometry from lidar data-->
   <include file="$(find serbot_bringup)/launch/odom_laser.launch" />
-
-  <!--<arg name="map_file" default="$(find serbot_bringup)/maps/map.yaml" />-->
-
-  <!-- Map server-->
-  <node name="map_server" pkg="map_server" type="map_server" args="$(find serbot_bringup)/maps/map.yaml" >
-      <param name="frame_id" value="map" />
-  </node>
 
 </launch>
 

@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="simple_navigation_goals" type="serbot_return.py" name="serbot_return"  output="screen">
+    <param name="tts_file" value="/home/chuck/Downloads/reached.mp3" />
+  </node>
+</launch>

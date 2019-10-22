@@ -25,7 +25,7 @@ def listener():
     # run simultaneously.
     rospy.init_node('peopledetect_listener_node', anonymous=True)
     pub = rospy.Publisher('/play_sound_file', String, queue_size=10)
-    hello = rospy.get_param('hello', '/home/chuck/Downloads/tts.mp3')
+    hello = rospy.get_param('hello', '/home/chuck/Downloads/1.mp3')
 
     rospy.Subscriber('/people_detect/found', RectArrayStamped, peopledetect_callback)
     # spin() simply keeps python from exiting until this node is stopped

@@ -1,19 +1,17 @@
 <launch>
   <!-- Arguments -->
   <arg name="scan_topic"     default="scan"/>
-  <arg name="use_map_topic"     default="true"/>
   <arg name="initial_pose_x" default="0.0"/>
   <arg name="initial_pose_y" default="0.0"/>
   <arg name="initial_pose_a" default="0.0"/>
 
   <!-- AMCL -->
   <node pkg="amcl" type="amcl" name="amcl">
-    <remap from="scan" to="scan" />
     <param name="global_frame_id"           value="map"/>
     <param name="odom_frame_id"             value="odom"/>
     <param name="base_frame_id"             value="base_footprint"/>
-    <param name="tf_broadcast"             value="true"/>
-    <param name="use_map_topic"             value="$(arg use_map_topic)"/>
+    <param name="tf_broadcast"              value="true"/>
+    <param name="use_map_topic"             value="true"/>
 
     <param name="min_particles"             value="500"/>
     <param name="max_particles"             value="3000"/>
@@ -21,13 +19,13 @@
     <param name="update_min_d"              value="0.20"/>
     <param name="update_min_a"              value="0.20"/>
     <param name="resample_interval"         value="1"/>
-    <param name="transform_tolerance"       value="0.5"/>
+    <param name="transform_tolerance"       value="0.1"/>
     <param name="recovery_alpha_slow"       value="0.00"/>
     <param name="recovery_alpha_fast"       value="0.00"/>
     <param name="initial_pose_x"            value="$(arg initial_pose_x)"/>
     <param name="initial_pose_y"            value="$(arg initial_pose_y)"/>
     <param name="initial_pose_a"            value="$(arg initial_pose_a)"/>
-    <param name="gui_publish_rate"          value="-1.0"/>
+    <param name="gui_publish_rate"          value="50.0"/>
 
     <remap from="scan"                      to="$(arg scan_topic)"/>
     <param name="laser_max_range"           value="3.5"/>

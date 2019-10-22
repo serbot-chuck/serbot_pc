@@ -26,6 +26,6 @@
     <param name="group_threshold" value="$(arg group_threshold)" />
   </node>
   <node name="publish_people_detect" pkg="serbot_opencv" type="publish_people_detect.py" output="screen" >
-    <param name="hello" value="/home/chuck/Downloads/tts.mp3" />
+    <param name="hello" value="/home/chuck/Downloads/1.mp3" />
   </node>
 </launch>
