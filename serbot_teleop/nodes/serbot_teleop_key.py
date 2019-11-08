@@ -35,12 +35,12 @@ if os.name == 'nt':
 else:
   import tty, termios
 
-WAFFLE_MAX_LIN_VEL = 1.0
+WAFFLE_MAX_LIN_VEL = 10.0
 #WAFFLE_MAX_ANG_VEL = 1.82
-WAFFLE_MAX_ANG_VEL = 100.0
+WAFFLE_MAX_ANG_VEL = 10.0
 
-LIN_VEL_STEP_SIZE = 0.01
-ANG_VEL_STEP_SIZE = 10.0
+LIN_VEL_STEP_SIZE = 1.0
+ANG_VEL_STEP_SIZE = 1.0
 
 msg = """
 Control Your Serbot!

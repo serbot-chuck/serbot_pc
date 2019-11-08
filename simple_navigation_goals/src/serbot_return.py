@@ -61,23 +61,23 @@ def movebase_client():
             if key == '0' :
                 print key               
                 goal.target_pose.header.stamp = rospy.Time.now()
-                goal.target_pose.pose.position.x = 0.5
-                goal.target_pose.pose.position.y = 0.0
+                goal.target_pose.pose.position.x = 2.3
+                goal.target_pose.pose.position.y = 0.05
                 goal.target_pose.pose.position.z = 0.0
                 goal.target_pose.pose.orientation.w = 1.0
                 client.send_goal(goal)
             elif key == '1' :
                 print key
                 goal.target_pose.header.stamp = rospy.Time.now()
-                goal.target_pose.pose.position.x = 1.0
-                goal.target_pose.pose.position.y = 0.0
+                goal.target_pose.pose.position.x = 1.4
+                goal.target_pose.pose.position.y = -0.4
                 goal.target_pose.pose.position.z = 0.0
                 goal.target_pose.pose.orientation.w = 1.0
                 client.send_goal(goal)
             elif key == '2' :
                 print key
                 goal.target_pose.header.stamp = rospy.Time.now()
-                goal.target_pose.pose.position.x = 0.5
+                goal.target_pose.pose.position.x = 1.5
                 goal.target_pose.pose.position.y = 0.5
                 goal.target_pose.pose.position.z = 0.0
                 goal.target_pose.pose.orientation.w = 1.0
@@ -85,8 +85,8 @@ def movebase_client():
             elif key == '3' :
                 print key
                 goal.target_pose.header.stamp = rospy.Time.now()
-                goal.target_pose.pose.position.x = 0.5
-                goal.target_pose.pose.position.y = 1.0
+                goal.target_pose.pose.position.x = 0.0
+                goal.target_pose.pose.position.y = 0.0
                 goal.target_pose.pose.position.z = 0.0
                 goal.target_pose.pose.orientation.w = 1.0
                 client.send_goal(goal)
