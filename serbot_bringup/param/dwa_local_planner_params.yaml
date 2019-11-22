@@ -6,8 +6,8 @@ DWAPlannerROS:
 
 
 
-  max_vel_x: 10.0
-  min_vel_x: -10.0
+  max_vel_x: 1.0
+  min_vel_x: -1.0
 ####################################
 
 #  max_vel_y: 0.18
@@ -16,22 +16,22 @@ DWAPlannerROS:
 # eunyeong
 #  max_vel_x: 0.3
 #  min_vel_x: 0.0
-####################################33
+####################################
 
   max_vel_y: 0.1
   min_vel_y: -0.1
 
 # The velocity when robot is moving in a straight line
-  max_trans_vel:  50.0
-  min_trans_vel:  -10.0
+  max_trans_vel:  1.0
+  min_trans_vel:  -1.0
 
 #  max_rot_vel: 2.75
 #  min_rot_vel: 1.37
 
 # eunyeong
 # max_rot_vel: 0.5
-  max_rot_vel: 1.0
-  min_rot_vel: -1.0
+  max_rot_vel: 0.5
+  min_rot_vel: -0.5
 ##############################3
 
   acc_lim_x: 2.5

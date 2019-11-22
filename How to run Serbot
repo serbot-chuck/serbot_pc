@@ -1,0 +1,11 @@
+<hector_slam>
+desktop pc(ros master) terminal 1 - roscore
+                       terminal 2 - roslaunch hector_slam_launch tutorial.launch
+                       terminal 3 - roslaunch serbot_teleop serbot_teleop_key.launch
+                       terminal 4 - rosrun map_server map_saver -f map
+raspberry pi terminal 1 - roslaunch serbot_bringup serbot_robot.launch
+
+<navigation>
+desktop pc(ros master) terminal 1 - roscore
+                       terminal 2 - roslaunch serbot_bringup view_navigation.launch
+raspberry pi terminal 1 - roslaunch serbot_bringup serbot_robot.launch

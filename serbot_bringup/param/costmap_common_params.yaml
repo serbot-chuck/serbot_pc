@@ -4,8 +4,9 @@ raytrace_range: 3.5
 footprint: [[-0.2, -0.12], [-0.2, 0.12], [0.2, 0.12], [0.23, 0.0], [0.2, -0.12]]
 #robot_radius: 0.4
 
-inflation_radius: 0.55
-cost_scaling_factor: 3.0
+#inflation_radius: 0.3
+#0.55
+#cost_scaling_factor: 3.0
 
 map_type: costmap
 publish_frequency: 2.0
@@ -40,8 +41,8 @@ obstacle_layer:
 #cost_scaling_factor and inflation_radius were now moved to the inflation_layer ns
 inflation_layer:
   enabled:              true
-  cost_scaling_factor:  2.5  # exponential rate at which the obstacle cost drops off (default: 10)
-  inflation_radius:     0.3  # max. distance from an obstacle at which costs are incurred for planning paths.
+  cost_scaling_factor:  2.0  # exponential rate at which the obstacle cost drops off (default: 10)
+  inflation_radius:     0.25  # max. distance from an obstacle at which costs are incurred for planning paths.
 
 static_layer:
   enabled:              true
